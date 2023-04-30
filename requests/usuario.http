@@ -1,0 +1,27 @@
+@api = http://localhost:3000/api
+GET {{api}}/usuarios
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsImlhdCI6MTY4Mjg5MzYxOCwiZXhwIjoxNjgyOTgwMDE4fQ.l_GIjNBonZaDZH5iX_4xi_idKPpT0P-ZVVahSHuKJE0
+###
+GET {{api}}/usuario/13
+###
+POST {{api}}/usuarios
+content-type:application/json
+
+{
+    "nombre": "josuemagico",
+    "apellidos":"morfin",
+    "password":"123456",
+    "email":"a20170098@utem.edu.mx"
+}
+###
+DELETE {{api}}/usuarios/15
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsImlhdCI6MTY4Mjg5MzYxOCwiZXhwIjoxNjgyOTgwMDE4fQ.l_GIjNBonZaDZH5iX_4xi_idKPpT0P-ZVVahSHuKJE0
+###
+PATCH  {{api}}/usuarios/13
+content-type:application/json
+
+{
+    "nombre": "josuemagico2",
+    "apellidos" :"morfin2"
+}
+
