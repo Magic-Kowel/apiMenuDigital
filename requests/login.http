@@ -1,0 +1,10 @@
+@api = http://localhost:3000/api
+
+
+POST {{api}}/usuarios/login
+content-type:application/json
+
+{
+    "email": "a20170094@utem.edu.mxs",
+    "password":"123456789"
+}
