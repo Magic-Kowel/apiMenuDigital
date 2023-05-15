@@ -1,32 +1,33 @@
 @api = http://localhost:3000/api
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTY4MzM5ODc2NiwiZXhwIjoxNjgzNDg1MTY2fQ.kY_fFtNdoVywXzlAHEcYWuNy__L09r5oJ_6sdpKoSpU
-GET {{api}}/usuarios
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjgzOTQ4NDA2LCJleHAiOjE2ODQwMzQ4MDZ9.fxGWmqYXUNygDR3RPaCiaB8Mi_b2GCIoscopiZc6Cvw
+GET {{api}}/users
 x-access-token: {{token}}
 ###
-GET {{api}}/usuarios/email/a20170093@utem.edu.mx
+GET {{api}}/user/email/a20170094@utem.edu.mx
 x-access-token: {{token}}
 
 ###
 //validar email
-GET {{api}}/usuario/1
+GET {{api}}/user/46
 x-access-token: {{token}}
 ###
-POST {{api}}/usuarios
+POST {{api}}/user
 content-type:application/json
 
 {
     "nombre": "josuemagico",
     "apellidos":"morfin",
     "password":"123456",
-    "email":"a20170093@utem.edu.mx"
+    "email":"a20170092@utem.edu.mx"
 }
 ###
-DELETE {{api}}/usuarios/15
+DELETE {{api}}/user/44
 x-access-token: {{token}}
 ###
-PATCH  {{api}}/usuarios/1
+PATCH  {{api}}/user/46
 content-type: application/json
 x-access-token: {{token}}
+
 {
     "nombre": "josuemagico3",
     "apellidos": "morfin3"

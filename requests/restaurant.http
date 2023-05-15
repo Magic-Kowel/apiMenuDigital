@@ -1,0 +1,23 @@
+@api = http://localhost:3000/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjg0MDk5NjUxLCJleHAiOjE2ODQxODYwNTF9.XGLa6MJ8EQOOVWt1f0u5saOs1l7V7mXeSuJvYuVlt9I
+
+GET {{api}}/restaurants
+###
+GET {{api}}/restaurant/81
+x-access-token: {{token}}
+###
+GET {{api}}/restaurant/user/
+x-access-token: {{token}}
+###
+
+POST {{api}}/restaurant
+content-type:application/json
+x-access-token: {{token}}
+
+{
+    "name": "restaurante1"
+}
+###
+DELETE {{api}}/restaurant/63
+x-access-token: {{token}}
+ 

@@ -69,7 +69,7 @@ export const getUser = async (req,res) =>{
         const [rows] = await pool.query('SELECT * FROM usuario WHERE activo = 1 AND usuario_id = ?',[req.params.id])
         if(rows.length <= 0){
             return res.status(404).json({
-                message: 'Employee not found'
+                message: 'User not found'
             })
         }
         res.json(rows[0]);
