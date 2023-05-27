@@ -22,7 +22,7 @@ export  const loginUser = async(req,res) =>{
                 },
                 SECRET_KEY,
                 {
-                    expiresIn: 60 * 60 * 24
+                    expiresIn: '7d'
                 })
                 return res.json({
                     idUser: row[0].usuario_id,

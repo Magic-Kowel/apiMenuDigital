@@ -1,12 +1,12 @@
 @api = http://localhost:3000/api
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjg0MDk5NjUxLCJleHAiOjE2ODQxODYwNTF9.XGLa6MJ8EQOOVWt1f0u5saOs1l7V7mXeSuJvYuVlt9I
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjg0MjE4NDEyLCJleHAiOjE2ODQzMDQ4MTJ9.wkmFN1_pAl4rEHtX6_jPLN6kGs8m0D6enCe5fPjlXi0
 
 GET {{api}}/restaurants
 ###
 GET {{api}}/restaurant/81
 x-access-token: {{token}}
 ###
-GET {{api}}/restaurant/user/
+GET {{api}}/restaurants/user/
 x-access-token: {{token}}
 ###
 
@@ -20,4 +20,13 @@ x-access-token: {{token}}
 ###
 DELETE {{api}}/restaurant/63
 x-access-token: {{token}}
+
+###
+PATCH  {{api}}/restaurant/81
+content-type:application/json
+x-access-token: {{token}}
+
+{
+    "name": "PRUEBA"
+}
  
