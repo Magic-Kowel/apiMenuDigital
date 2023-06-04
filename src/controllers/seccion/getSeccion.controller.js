@@ -1,5 +1,5 @@
 import { pool } from "../../db.js";
-export const getSeccions = async (req,res) =>{
+export const getSeccion = async (req,res) =>{
     try {
         const [rows] = await pool.query(`SELECT 
         seccion_id,
@@ -10,8 +10,8 @@ export const getSeccions = async (req,res) =>{
         FROM seccion INNER  
         join imagen 
         on fk_imagen_id = imagen_id
-        WHERE fk_restaurante_id = ? 
-        and activo = 1`,[req.params.idRestaurant])
+        WHERE seccion_id = ? 
+        and activo = 1`,[req.params.idSeccion])
         if(rows.length <= 0){
             return res.status(404).json({
                 message: 'Seccion not found'

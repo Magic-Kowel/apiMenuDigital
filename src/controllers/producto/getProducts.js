@@ -1,20 +1,22 @@
 import { pool } from "../../db.js";
-export const getSeccions = async (req,res) =>{
+export const getProducts = async (req,res) =>{
     try {
         const [rows] = await pool.query(`SELECT 
-        seccion_id,
+        producto_id,
+        fk_seccion_id,
+        imagen.path,
         nombre,
         descripcion,
-        path,
-        fk_restaurante_id AS restaurante_id
-        FROM seccion INNER  
-        join imagen 
+        price 
+        FROM producto
+        INNER JOIN imagen
         on fk_imagen_id = imagen_id
-        WHERE fk_restaurante_id = ? 
-        and activo = 1`,[req.params.idRestaurant])
+        WHERE fk_seccion_id = ? 
+        and activo = 1`,[req.params.idSeccion])
+        console.log(rows);
         if(rows.length <= 0){
             return res.status(404).json({
-                message: 'Seccion not found'
+                message: 'producto not found'
             })
         }
         res.json(rows);

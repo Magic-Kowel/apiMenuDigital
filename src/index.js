@@ -5,7 +5,8 @@ import { PORT } from "./config.js";
 
 //routes
 import restaurantRoutes from './routes/restaurant.routes.js';
-import seccion from './routes/seccion.router.js';
+import seccionRoutes from './routes/seccion.router.js';
+import productRoutes from './routes/product.router.js';
 import usuariosRoutes from './routes/user.routes.js';
 import fileRoutes from "./routes/files.routes.js";
 const app = express();
@@ -15,7 +16,8 @@ app.use(morgan('short'));
 app.use(express.json());
 //apis
 app.use('/api',restaurantRoutes);
-app.use('/api',seccion);
+app.use('/api',seccionRoutes);
+app.use('/api',productRoutes);
 app.use('/api',usuariosRoutes);
 // imagenes
 app.use(express.static('./uploads'));

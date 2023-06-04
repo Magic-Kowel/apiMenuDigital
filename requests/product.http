@@ -1,14 +1,4 @@
 @api = http://localhost:3000/api
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjg1MjIzNzQwLCJleHAiOjE2ODU4Mjg1NDB9.FV_wbzy-iIPaO7x2CzYUa4jyISggrvWmKkxP_Fgv5i8
-GET {{api}}/seccions/1
-x-access-token: {{token}}
-###
 
-GET {{api}}/seccions/1
-x-access-token: {{token}}
-###
-GET {{api}}/seccion/8
-x-access-token: {{token}}
-###
-DELETE {{api}}/seccion/3
-x-access-token: {{token}}
+GET {{api}}/products/1

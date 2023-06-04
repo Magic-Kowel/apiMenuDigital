@@ -1,9 +1,9 @@
 @api = http://localhost:3000/api
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjg0MjE4NDEyLCJleHAiOjE2ODQzMDQ4MTJ9.wkmFN1_pAl4rEHtX6_jPLN6kGs8m0D6enCe5fPjlXi0
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsInBlcm1pc28iOiJyZXN0YXVyYW50IiwiaWF0IjoxNjg1NTgxMzcwLCJleHAiOjE2ODYxODYxNzB9.Pfbfj209VjPsVKWEmb0QTP0j51YqLQI9Wnv94_P_yJI
 
 GET {{api}}/restaurants
 ###
-GET {{api}}/restaurant/81
+GET {{api}}/restaurant/2
 x-access-token: {{token}}
 ###
 GET {{api}}/restaurants/user/
